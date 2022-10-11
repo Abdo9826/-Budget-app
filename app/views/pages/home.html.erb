@@ -1,0 +1,12 @@
+
+
+<div>
+<h1 class = "blue" >Snapscan<h1>
+<% if current_user %>
+  <p>Logged in as <%= current_user.email %></p>
+  <%= link_to 'sing out', destroy_user_session_path, method: :delete, :class => "a btn btn-primary btn-lg" %>
+<% else %>
+  <%= link_to  'LOG IN', new_user_session_path, :class => "btn btn-primary ww"  %>
+  <%= link_to 'SING UP', new_user_registration_path, :class => " btn btn-light ww" %> <br/>
+<% end %>
+</div>
