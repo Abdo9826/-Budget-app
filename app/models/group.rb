@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Group < ApplicationRecord
   include ActiveModel::Validations
   belongs_to :user, class_name: 'User', foreign_key: :user_id
