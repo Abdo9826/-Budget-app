@@ -1,0 +1,36 @@
+<div class="groups-container">
+  <nav class="nav-container fixed">
+    <div class="nav transactions-nav">
+      <%= link_to groups_path do %>
+        <i class="fa-light fa-backward back" style="font-family: FontAwesome;"></i>
+      <% end  %>
+      <h1 class="register text-font bold">DETAILS</h1>
+    </div>
+  </nav>
+
+
+  <div class="groups">
+    <h1 class="total-transaction">Total Transaction: $<%= @group.total %></h1>
+    <% @operations.each do |operation| %>
+      <div class="each-transaction">
+        <div class="flex image-title">
+          <img class="group-image" src="<%= @group.icon %>" alt="img logo">
+          <h1 class="info-title text-font thin"><%= operation.name.capitalize %></h1>
+        </div>
+        <hr>
+        <div class="flex date">
+          <i class="fa-regular fa-calendar-days" style="font-family: FontAwesome;"></i>
+          <p class="transaction-deposit total-deposit w-auto text-font thin"><%= operation.updated_at.to_date %></p>
+        </div>
+        <hr>
+        <div class="flex deposit">
+          <h2>Total Deposit: </h2>
+          <p class="transaction-deposit total-deposit text-font bold"><%= operation.amount %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+ 
+
+</div>

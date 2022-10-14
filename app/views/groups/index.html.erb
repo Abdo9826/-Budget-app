@@ -1,0 +1,38 @@
+<nav class = "navbar navbar-dark bg-primary">
+<%= link_to '<', :back, :class => "  big a text-light"%> 
+<h2 class = "text-light center">TRANSACTIONS</h2>
+<%= link_to 'sing out', destroy_user_session_path, method: :delete, :class => "btn btn-primary top" %>
+</nav>
+
+<div class="groups-container">
+<p class = "text-muted">welcome <%=  current_user.name%></p>
+
+
+  <nav class="nav-container fixed">
+    <div class="nav transactions-nav">
+      <img class="ham-burger" src="" alt="">
+      <%# <i class="back-icon fa fa-trash-o"></i> %>
+    </div>
+  </nav>
+
+  <div class="groups">
+
+
+    <% @groups.each do |group| %>
+      <%= link_to group_operations_path(group.id) do %>
+        <div class="each-group">
+          <img class="group-image" src="<%= group.icon %>" alt="img logo">
+          <div class="info">
+            <h1 class="info-title text-font thin"><%= group.name %></h1>
+            <p class="info-date text-font thin">12 Apr 2022</p>
+          </div>
+          <p class="total-deposit text-font bold">$30.00</p>
+        </div>
+      <% end  %>
+    <% end  %>
+  <%= link_to new_group_path do %>
+    <div class="new">
+      <button class="new-button text-font thin btn btn-outline-primary w-bt2">New</button>
+    </div>
+  <% end  %>
+</div>
