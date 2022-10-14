@@ -1,0 +1,22 @@
+<div class="groups-container">
+  <nav class="nav-container fixed">
+    <div class="nav transactions-nav">
+      <img class="ham-burger" src="" alt="">
+      <h1 class="text-dark">Create a new Group</h1>
+    </div>
+  </nav>
+
+  <%= form_with model: @group, html: {class: "new-group groups"}, method: :post do |f| %>
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, autocomplete: "email", placeholder: "Name", class: 'form-control bg-white  bot' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :icon,  placeholder: "Icon", class: 'form-control bg-white  bot' %>
+    </div>
+
+    <button type="submit" class="btn btn-secondary btn-lg w-bt bt-cr">Save</button>
+
+  <% end %>
+
+</div>
