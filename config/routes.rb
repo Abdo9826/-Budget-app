@@ -1,8 +1,18 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_scope :user do
+    get 'users/sign_out' => 'devise/sessions#destroy'
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/get-started', to: 'users#splash'
+  devise_for :users
+  resources :users
+  resources :groups do
+    resources :operations, only: [:index]
+  end
+
+  resources :operations, only: %i[new create edit update destroy post]
+
+  root 'groups#index'
 end

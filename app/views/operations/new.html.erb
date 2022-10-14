@@ -1,0 +1,29 @@
+<nav class = "navbar navbar-dark bg-primary">
+<%= link_to '<', :back, :class => "  big a text-light"%> 
+<h2 class = "text-light op2" >new Transaction</h2>
+</nav>
+
+
+
+
+<div class="groups-container">
+ 
+  <%= form_with model: @operation, html: {class: "new-group groups"}, method: :post do |f| %>
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, placeholder: "Name", class: 'form-control bg-white  bot' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :amount,  placeholder: "Amount", class: 'form-control bg-white  bot' %>
+    </div>
+
+    <div class="checks check-groups">
+      <%= f.label :groups %>
+      <%= f.collection_check_boxes(:group_ids, @client.groups, :id, :name) %>
+    </div>
+
+    <button type="submit" class="btn btn-secondary btn-lg w-bt bt-cr">Save</button>
+
+  <% end %>
+
+</div>

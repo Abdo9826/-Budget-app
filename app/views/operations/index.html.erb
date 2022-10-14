@@ -1,0 +1,36 @@
+<nav class = "navbar navbar-dark bg-primary">
+<%= link_to '<', :back, :class => "  big a text-light"%> 
+<h2 class = "text-light op" >DETAILS</h2>
+</nav>
+
+<div class="groups-container">
+
+  <div class="groups">
+    <h1 class="total-transaction">Total Transaction: $<%= @group.total %></h1>
+    <% @operations.each do |operation| %>
+      <div class="each-transaction">
+        <div class="flex image-title">
+          <img class="group-image" src="<%= @group.icon %>" alt="img logo">
+          <h1 class="info-title text-font thin"><%= operation.name.capitalize %></h1>
+        </div>
+        <hr>
+        <div class="flex date">
+          <i class="fa-regular fa-calendar-days" style="font-family: FontAwesome;"></i>
+          <p class="transaction-deposit total-deposit w-auto text-font thin"><%= operation.updated_at.to_date %></p>
+        </div>
+        <hr>
+        <div class="flex deposit">
+          <h2>Total Deposit: </h2>
+          <p class="transaction-deposit total-deposit text-font bold"><%= operation.amount %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to new_operation_path do %>
+    <div class="new">
+      <button class="new-button text-font thin btn btn-outline-primary w-bt2">New</button>
+    </div>
+  <% end  %>
+
+</div>

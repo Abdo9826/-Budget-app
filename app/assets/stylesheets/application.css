@@ -1,15 +1,232 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.blue {
+  color: #434b54;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 25%;
+  margin-bottom: 50%;
+}
+
+.a {
+  text-decoration-line: none;
+}
+
+.ww {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+.navbar {
+  margin-top: -66px;
+}
+
+.center {
+  margin-right: -10%;
+  font-size: 20px;
+}
+
+.top {
+  margin-top: -10px;
+}
+
+.big {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: -10px;
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+.noborder {
+  border: none;
+}
+
+.centerr {
+  margin-left: 30%;
+}
+
+.bot {
+  margin-bottom: 9%;
+}
+
+.groups-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f6f8;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.fixed {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.transactions-nav {
+  justify-content: center;
+}
+
+/* STYLING THE GROUPS */
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 5rem;
+  height: calc(100% - 180px);
+  overflow-y: auto;
+}
+
+.each-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 130px;
+  width: auto;
+  margin: 20px 15px 20px 15px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgb(144, 143, 143);
+}
+
+.group-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+.info {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.info-title {
+  margin: 15px 0 0 0;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.info-date {
+  margin: 15px 0 0 0;
+  font-size: 14px;
+  color: grey;
+}
+
+.total-deposit {
+  width: 20%;
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.deposit-position {
+  position: absolute;
+  top: 52%;
+  right: 15px;
+}
+
+.new {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--green);
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.new-button {
+  width: 95%;
+  height: 3.5rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.new-group {
+  margin-top: 150px;
+}
+
+.save-group {
+  width: 20%;
+  height: 2rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.total-transaction {
+  margin: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px 5px grey;
+}
+
+.each-transaction {
+  display: flex;
+  width: auto;
+  margin: 20px 15px 20px 15px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgb(144, 143, 143);
+  flex-direction: column;
+  height: auto;
+}
+
+.image-title {
+  align-items: center;
+}
+
+.date {
+  margin: 1rem;
+  font-weight: 300;
+  align-items: center;
+}
+
+.deposit {
+  margin: 1rem;
+  align-items: center;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-bt {
+  width: 50%;
+}
+
+.bt-cr {
+  margin-left: 25%;
+}
+
+.w-bt2 {
+  width: 92%;
+}
+
+.op {
+  margin-right: 40%;
+  font-size: 20px;
+}
+
+.op2 {
+  margin-right: 28%;
+  font-size: 20px;
+}
